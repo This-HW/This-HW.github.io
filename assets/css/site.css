@@ -23,7 +23,7 @@
   --raised: #ffffff;
   --ink: #15171a;
   --ink-2: #565b62;
-  --ink-3: #8a8f96;
+  --ink-3: #80858c; /* large-text contrast >= 3:1 on paper (WCAG AA) */
   --rule: #d8dbdf;
   --accent: #2b45c2;
   --dg-fill: #f4f5f6;
