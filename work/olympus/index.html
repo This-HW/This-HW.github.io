@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>에이전트 운영 플랫폼 | 이현욱</title>
+<meta name="description" content="AI가 기획·실행·평가하고, 사람은 이사회처럼 방향·예산·위험만 결정 (구축 중)">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f4f5f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111315" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="에이전트 운영 플랫폼 | 이현욱">
+<meta property="og:description" content="AI가 기획·실행·평가하고, 사람은 이사회처럼 방향·예산·위험만 결정 (구축 중)">
+<meta property="og:url" content="https://this-hw.github.io/work/olympus/">
+<meta property="og:image" content="https://this-hw.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://this-hw.github.io/work/olympus/">
+<link rel="alternate" hreflang="ko" href="https://this-hw.github.io/work/olympus/">
+<link rel="alternate" hreflang="en" href="https://this-hw.github.io/en/work/olympus/">
+<link rel="alternate" hreflang="x-default" href="https://this-hw.github.io/work/olympus/">
+<link rel="preload" href="../../assets/fonts/hwsans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script src="../../assets/js/site.js" defer></script>
+</head>
+<body class="p-case">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="mast">
+  <div class="wrap mast-in">
+    <a class="mast-name" href="../../" aria-label="이현욱 — 홈">HW</a>
+    <nav class="mast-nav" aria-label="대표 작업"><ul><li><a href="../../#work">작업</a></li><li><a href="../../#career">경력</a></li><li><a href="../../#principles">일하는 방식</a></li><li><a href="../../#stack">기술</a></li><li><a href="../../#contact">연락</a></li></ul></nav>
+    <a class="lang" href="../../en/work/olympus/" hreflang="en" lang="en" aria-label="영어로 보기">English</a>
+  </div>
+</header>
+<main id="main">
+
+<article class="case-page">
+  <header class="ch wrap">
+    <p class="ch-back"><a href="../../#work">모든 작업</a></p>
+    <p class="ch-tags tags" lang="en">Python · PostgreSQL · LLM Agents</p>
+    <h1 class="ch-t" lang="ko">에이전트 운영 플랫폼</h1>
+    <p class="ch-dek">AI가 기획·실행·평가하고, 사람은 이사회처럼 방향·예산·위험만 결정 (구축 중)</p>
+  </header>
+  <section class="cs wrap" data-reveal><h2 class="cs-h">배경</h2><div class="cs-b"><p>AI에게 일을 맡길수록 사람이 하는 일은 &quot;확인&quot;으로 바뀌었습니다. 확인할 것이 늘면 사람이 병목이 됩니다.</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">문제</h2><div class="cs-b"><p>사람이 개입하지 않아도 AI가 일을 기획하고 실행하고 결과로 다시 판단하게 하려면 사람이 무엇을 쥐고 있어야 할지 정해야 했습니다.</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">만든 것<span class="cs-note">두 번째 버전 구축 중</span></h2><div class="cs-b"><ul class="bul"><li>사람은 이사회처럼 방향·예산·위험만 결정합니다.</li><li>일마다 결과가 나오기 전에 가설과 성공·실패 기준을 못 박습니다.</li><li>AI 러너는 격리된 작업 공간에서 돌아갑니다. 작성자와 검토자는 서로 다른 러너가 맡습니다.</li><li>외부 시스템에 영향을 주는 작업은 게이트웨이 하나만 거치고, 필요한 작업은 사람이 휴대폰으로 승인합니다.</li><li>첫 버전에서는 로컬·클라우드 모델을 역할별로 배정하고 실패하면 다음 모델로 넘기게 했습니다.</li></ul></div><figure class="dg"><svg class="dg-svg dg-w" viewBox="-2 -2 1044 240" width="1044" height="240" role="img" aria-labelledby="dg-olympus-w-title" focusable="false"><title id="dg-olympus-w-title">에이전트 운영 플랫폼 구조도</title><defs><marker id="dg-olympus-w-ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head"/></marker><marker id="dg-olympus-w-aha" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head dg-head-acc"/></marker></defs><g class="dg-group"><rect x="276" y="0" width="380" height="133" rx="4"/><text x="290" y="21" class="dg-cap" text-anchor="start">격리된 작업 공간의 AI 러너</text></g><g class="dg-node dg-plain"><rect x="296" y="42" width="138" height="46" rx="3"/><text x="365" y="69.4" class="dg-t" text-anchor="middle">작성자</text></g><g class="dg-node dg-plain"><rect x="498" y="42" width="138" height="46" rx="3"/><text x="567" y="69.4" class="dg-t" text-anchor="middle">검토자</text></g><text x="466" y="72" class="dg-neq" text-anchor="middle">≠</text><text x="466" y="114.24" class="dg-s" text-anchor="middle">서로 다른 러너</text><g class="dg-node dg-accent"><rect x="0" y="23" width="210" height="84" rx="3"/><text x="14" y="50.4" class="dg-t" text-anchor="start">이사회 (사람)</text><text x="14" y="72.24" class="dg-s" text-anchor="start">방향·예산·위험만 결정</text></g><g class="dg-node dg-plain"><rect x="720" y="23" width="186" height="84" rx="3"/><text x="734" y="50.4" class="dg-t" text-anchor="start">게이트웨이 하나</text><text x="734" y="72.24" class="dg-s" text-anchor="start">외부 시스템에 영향을 주는</text><text x="734" y="89.24" class="dg-s" text-anchor="start">작업은 모두 여기를 거침</text></g><g class="dg-node dg-muted"><rect x="936" y="23" width="104" height="84" rx="3"/><text x="950" y="50.4" class="dg-t" text-anchor="start">외부</text></g><path d="M210 65 L276 65" class="dg-e" marker-end="url(#dg-olympus-w-ah)"/><path d="M656 65 L720 65" class="dg-e" marker-end="url(#dg-olympus-w-ah)"/><path d="M906 65 L936 65" class="dg-e" marker-end="url(#dg-olympus-w-ah)"/><g class="dg-node dg-accent"><rect x="720" y="169" width="186" height="67" rx="3"/><text x="734" y="196.4" class="dg-t" text-anchor="start">휴대폰 승인</text><text x="734" y="218.24" class="dg-s" text-anchor="start">필요할 때 사람이 승인</text></g><path d="M813 107 L813 169" class="dg-e dg-e-acc dg-dot-line"/></svg><svg class="dg-svg dg-n" viewBox="-2 -2 344 442" width="344" height="442" role="img" aria-labelledby="dg-olympus-n-title" focusable="false"><title id="dg-olympus-n-title">에이전트 운영 플랫폼 구조도</title><defs><marker id="dg-olympus-n-ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head"/></marker><marker id="dg-olympus-n-aha" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head dg-head-acc"/></marker></defs><g class="dg-group"><rect x="0" y="103" width="340" height="133" rx="4"/><text x="14" y="124" class="dg-cap" text-anchor="start">격리된 작업 공간의 AI 러너</text></g><g class="dg-node dg-accent"><rect x="0" y="0" width="340" height="67" rx="3"/><text x="14" y="27.4" class="dg-t" text-anchor="start">이사회 (사람)</text><text x="14" y="49.24" class="dg-s" text-anchor="start">방향·예산·위험만 결정</text></g><g class="dg-node dg-plain"><rect x="14" y="145" width="136" height="46" rx="3"/><text x="82" y="172.4" class="dg-t" text-anchor="middle">작성자</text></g><g class="dg-node dg-plain"><rect x="190" y="145" width="136" height="46" rx="3"/><text x="258" y="172.4" class="dg-t" text-anchor="middle">검토자</text></g><text x="170" y="175" class="dg-neq" text-anchor="middle">≠</text><text x="170" y="217.24" class="dg-s" text-anchor="middle">서로 다른 러너</text><path d="M22 67 L22 103" class="dg-e" marker-end="url(#dg-olympus-n-ah)"/><g class="dg-node dg-plain"><rect x="0" y="272" width="190" height="84" rx="3"/><text x="14" y="299.4" class="dg-t" text-anchor="start">게이트웨이 하나</text><text x="14" y="321.24" class="dg-s" text-anchor="start">외부 시스템에 영향을 주는</text><text x="14" y="338.24" class="dg-s" text-anchor="start">작업은 모두 여기를 거침</text></g><g class="dg-node dg-accent"><rect x="214" y="272" width="126" height="84" rx="3"/><text x="228" y="299.4" class="dg-t" text-anchor="start">휴대폰 승인</text><text x="228" y="321.24" class="dg-s" text-anchor="start">필요할 때 사람이</text><text x="228" y="338.24" class="dg-s" text-anchor="start">승인</text></g><path d="M22 236 L22 272" class="dg-e" marker-end="url(#dg-olympus-n-ah)"/><path d="M190 314 L214 314" class="dg-e dg-e-acc dg-dot-line"/><g class="dg-node dg-muted"><rect x="0" y="392" width="190" height="46" rx="3"/><text x="14" y="419.4" class="dg-t" text-anchor="start">외부</text></g><path d="M22 356 L22 392" class="dg-e" marker-end="url(#dg-olympus-n-ah)"/></svg></figure></section><section class="cs wrap" data-reveal><h2 class="cs-h">틀렸던 것과 고친 것</h2><div class="cs-b"><ul class="bul"><li>첫 버전에서는 AI 작업자 7개가 큐를 나눠 맡는 구조였습니다. 오류로 20만 번 넘게 재시작하는 일이 생겨 접고 하나의 빌드 흐름으로 합쳤습니다.</li><li>제가 직접 지시한 로컬 모델 교체도, 측정 전에 정해 둔 탈락 기준(기존보다 3.26배 느리고 메모리 두 배 가까이)에 걸려 철회했습니다.</li><li>그 뒤로는 무언가를 바꾸기 전에 &quot;어떤 결과가 나오면 접을지&quot;를 먼저 정합니다.</li></ul></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">결과</h2><div class="cs-b"><p class="lead">커밋 4,520건(<span class="nw">2026-11-08</span>), 테스트 함수 15,409개(<span class="nw">2026-10-28</span>), 첫 번째·두 번째 버전 합계. 첫 실증 대상은 <a href="../syndicator/">데이터 매체 파이프라인</a>으로 정했습니다(<span class="nw">2026-11</span> 기준, 아직 연결 전).</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">근거</h2><div class="cs-b"><p>비공개 저장소. 면접에서 시연 가능합니다.</p></div></section>
+  <nav class="nx wrap" aria-label="다음 사례">
+    <a href="../hiway-kit/"><span>다음 사례</span><strong lang="en">hiway-kit</strong></a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p class="foot-name">이현욱<span>AI·데이터 엔지니어</span></p>
+    <a class="lang" href="../../en/work/olympus/" hreflang="en" lang="en" aria-label="영어로 보기">English</a>
+  </div>
+</footer>
+</body>
+</html>

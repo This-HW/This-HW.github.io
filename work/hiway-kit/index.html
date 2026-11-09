@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hiway-kit | 이현욱</title>
+<meta name="description" content="사람은 기획과 검증 관문에서만 결정하고, AI 에이전트가 프로덕션 수준 코드까지 스스로 끝내는 개발 키트. Anthropic 심사를 거쳐 Claude 플러그인 디렉토리에 등재">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f4f5f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111315" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hiway-kit | 이현욱">
+<meta property="og:description" content="사람은 기획과 검증 관문에서만 결정하고, AI 에이전트가 프로덕션 수준 코드까지 스스로 끝내는 개발 키트. Anthropic 심사를 거쳐 Claude 플러그인 디렉토리에 등재">
+<meta property="og:url" content="https://this-hw.github.io/work/hiway-kit/">
+<meta property="og:image" content="https://this-hw.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://this-hw.github.io/work/hiway-kit/">
+<link rel="alternate" hreflang="ko" href="https://this-hw.github.io/work/hiway-kit/">
+<link rel="alternate" hreflang="en" href="https://this-hw.github.io/en/work/hiway-kit/">
+<link rel="alternate" hreflang="x-default" href="https://this-hw.github.io/work/hiway-kit/">
+<link rel="preload" href="../../assets/fonts/hwsans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script src="../../assets/js/site.js" defer></script>
+</head>
+<body class="p-case">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="mast">
+  <div class="wrap mast-in">
+    <a class="mast-name" href="../../" aria-label="이현욱 — 홈">HW</a>
+    <nav class="mast-nav" aria-label="대표 작업"><ul><li><a href="../../#work">작업</a></li><li><a href="../../#career">경력</a></li><li><a href="../../#principles">일하는 방식</a></li><li><a href="../../#stack">기술</a></li><li><a href="../../#contact">연락</a></li></ul></nav>
+    <a class="lang" href="../../en/work/hiway-kit/" hreflang="en" lang="en" aria-label="영어로 보기">English</a>
+  </div>
+</header>
+<main id="main">
+
+<article class="case-page">
+  <header class="ch wrap">
+    <p class="ch-back"><a href="../../#work">모든 작업</a></p>
+    <p class="ch-tags tags" lang="en">Claude Code · Codex · Python · GitHub Actions</p>
+    <h1 class="ch-t" lang="en">hiway-kit</h1>
+    <p class="ch-dek">사람은 기획과 검증 관문에서만 결정하고, AI 에이전트가 프로덕션 수준 코드까지 스스로 끝내는 개발 키트. Anthropic 심사를 거쳐 Claude 플러그인 디렉토리에 등재</p>
+  </header>
+  <section class="cs wrap" data-reveal><h2 class="cs-h">배경</h2><div class="cs-b"><p>코딩 에이전트에게 기능을 맡기면 곧바로 코드부터 쓰고 얼마 뒤 &quot;다 됐습니다&quot;라고 보고합니다. 그런데 아무도 정하지 않은 요구사항은 추측으로 채워져 있고, 돌렸다던 테스트는 실행된 적이 없는 경우가 많았습니다.</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">문제</h2><div class="cs-b"><p>에이전트의 완료 보고만으로는 요구사항 충족을 확인할 수 없었습니다. 그렇다고 사람이 매번 옆에서 확인하면 맡길 이유가 없습니다.</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">만든 것</h2><div class="cs-b"><p>관문 두 개와 그 사이의 루프입니다.</p><ul class="bul"><li><strong>기획 관문</strong>: 큰 작업은 계획부터 세우고 완료 조건을 실행할 수 있는 명령으로 적습니다. 데이터·보안·돈에 닿는 모호함이 있을 때만 멈추고 묻습니다.</li><li><strong>구현 루프</strong>: AI 에이전트가 승인된 계획을 끝까지 밀고 갑니다. 사람만 답할 수 있는 질문에서만 멈춥니다.</li><li><strong>검증 관문</strong>: 완료 조건으로 적은 확인 명령이 통과해야 완료로 칩니다. 병합 전에는 작성자와 분리된 컨텍스트에서 리뷰와 보안 스캔을 합니다.</li><li>Claude Code를 기준으로 만들었고, Codex·Antigravity에는 각 도구가 지원하는 범위 안에서 같은 규칙과 절차를 제공합니다.</li></ul></div><figure class="dg"><svg class="dg-svg dg-w" viewBox="-2 -2 1044 217" width="1044" height="217" role="img" aria-labelledby="dg-hiway-kit-w-title" focusable="false"><title id="dg-hiway-kit-w-title">hiway-kit 구조도</title><defs><marker id="dg-hiway-kit-w-ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head"/></marker><marker id="dg-hiway-kit-w-aha" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head dg-head-acc"/></marker></defs><g class="dg-node dg-accent"><rect x="0" y="0" width="268" height="136" rx="3"/><circle cx="17" cy="20.56" r="3" class="dg-dot"/><text x="26" y="24.88" class="dg-tag">사람이 결정</text><text x="14" y="45.4" class="dg-t" text-anchor="start">기획 관문</text><text x="14" y="67.24" class="dg-s" text-anchor="start">완료 조건은 실행할 수 있는 명령</text><text x="14" y="84.24" class="dg-s" text-anchor="start">데이터·보안·돈에 닿는 모호함만 질문</text></g><g class="dg-node dg-plain"><rect x="328" y="0" width="268" height="136" rx="3"/><text x="342" y="27.4" class="dg-t" text-anchor="start">구현 루프</text><text x="342" y="49.24" class="dg-s" text-anchor="start">AI 에이전트가 승인된 계획을</text><text x="342" y="66.24" class="dg-s" text-anchor="start">끝까지 밀고 감</text></g><g class="dg-node dg-accent"><rect x="656" y="0" width="268" height="136" rx="3"/><circle cx="673" cy="20.56" r="3" class="dg-dot"/><text x="682" y="24.88" class="dg-tag">사람이 결정</text><text x="670" y="45.4" class="dg-t" text-anchor="start">검증 관문</text><text x="670" y="67.24" class="dg-s" text-anchor="start">완료 조건의 확인 명령이</text><text x="670" y="84.24" class="dg-s" text-anchor="start">통과해야 완료</text><text x="670" y="101.24" class="dg-s" text-anchor="start">병합 전 분리된 컨텍스트에서</text><text x="670" y="118.24" class="dg-s" text-anchor="start">리뷰와 보안 스캔</text></g><g class="dg-node dg-muted"><rect x="964" y="46" width="76" height="44" rx="3"/><text x="1002" y="72.4" class="dg-t" text-anchor="middle">완료</text></g><path d="M268 68 L328 68" class="dg-e" marker-end="url(#dg-hiway-kit-w-ah)"/><path d="M596 68 L656 68" class="dg-e" marker-end="url(#dg-hiway-kit-w-ah)"/><path d="M924 68 L964 68" class="dg-e" marker-end="url(#dg-hiway-kit-w-ah)"/><path d="M504.88 136 L504.88 166 L419.12 166 L419.12 137" class="dg-e" marker-end="url(#dg-hiway-kit-w-ah)"/><text x="462" y="190" class="dg-s" text-anchor="middle">사람만 답할 수 있는</text><text x="462" y="207" class="dg-s" text-anchor="middle">질문에서만 멈춤</text></svg><svg class="dg-svg dg-n" viewBox="-2 -2 344 510" width="344" height="510" role="img" aria-labelledby="dg-hiway-kit-n-title" focusable="false"><title id="dg-hiway-kit-n-title">hiway-kit 구조도</title><defs><marker id="dg-hiway-kit-n-ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head"/></marker><marker id="dg-hiway-kit-n-aha" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head dg-head-acc"/></marker></defs><g class="dg-node dg-accent"><rect x="0" y="0" width="304" height="102" rx="3"/><circle cx="17" cy="20.56" r="3" class="dg-dot"/><text x="26" y="24.88" class="dg-tag">사람이 결정</text><text x="14" y="45.4" class="dg-t" text-anchor="start">기획 관문</text><text x="14" y="67.24" class="dg-s" text-anchor="start">완료 조건은 실행할 수 있는 명령</text><text x="14" y="84.24" class="dg-s" text-anchor="start">데이터·보안·돈에 닿는 모호함만 질문</text></g><g class="dg-node dg-plain"><rect x="0" y="142" width="304" height="84" rx="3"/><text x="14" y="169.4" class="dg-t" text-anchor="start">구현 루프</text><text x="14" y="191.24" class="dg-s" text-anchor="start">AI 에이전트가 승인된 계획을</text><text x="14" y="208.24" class="dg-s" text-anchor="start">끝까지 밀고 감</text></g><g class="dg-node dg-accent"><rect x="0" y="290" width="304" height="136" rx="3"/><circle cx="17" cy="310.56" r="3" class="dg-dot"/><text x="26" y="314.88" class="dg-tag">사람이 결정</text><text x="14" y="335.4" class="dg-t" text-anchor="start">검증 관문</text><text x="14" y="357.24" class="dg-s" text-anchor="start">완료 조건의 확인 명령이</text><text x="14" y="374.24" class="dg-s" text-anchor="start">통과해야 완료</text><text x="14" y="391.24" class="dg-s" text-anchor="start">병합 전 분리된 컨텍스트에서</text><text x="14" y="408.24" class="dg-s" text-anchor="start">리뷰와 보안 스캔</text></g><g class="dg-node dg-muted"><rect x="0" y="466" width="76" height="40" rx="3"/><text x="38" y="490.4" class="dg-t" text-anchor="middle">완료</text></g><path d="M22 102 L22 142" class="dg-e" marker-end="url(#dg-hiway-kit-n-ah)"/><path d="M22 226 L22 290" class="dg-e" marker-end="url(#dg-hiway-kit-n-ah)"/><path d="M22 426 L22 466" class="dg-e" marker-end="url(#dg-hiway-kit-n-ah)"/><path d="M304 167.2 L330 167.2 L330 200.8 L305 200.8" class="dg-e" marker-end="url(#dg-hiway-kit-n-ah)"/><text x="38" y="253.24" class="dg-s" text-anchor="start">사람만 답할 수 있는</text><text x="38" y="270.24" class="dg-s" text-anchor="start">질문에서만 멈춤</text></svg></figure></section><section class="cs wrap" data-reveal><h2 class="cs-h">틀렸던 것과 고친 것</h2><div class="cs-b"><p>에이전트가 32개였을 때, &quot;커밋해줘&quot;나 &quot;봐줘&quot; 같은 평범한 말 한마디에 서브에이전트가 불려 나오던 곳이 139곳 있었습니다. 다른 단계로 흡수되거나 쓰이지 않던 에이전트를 정리해 15개로 줄이고 호출 조건을 다시 써서 0곳이 됐습니다. 같은 릴리스에서 문서 편집 때 자동 포맷 훅 지연도 242ms에서 19ms로 줄였습니다(5회 측정 중앙값).</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">결과</h2><div class="cs-b"><ul class="bul"><li>2026년 9월, Anthropic 심사를 거쳐 Claude 플러그인 디렉토리에 등재됐습니다. 이 디렉토리는 claude.ai, Cowork, Claude Code에서 함께 쓰입니다.</li><li>전작 <a href="https://github.com/This-HW/claude-code-kit"><span class="nw">claude-code-kit</span></a>은 Anthropic 커뮤니티 플러그인 마켓플레이스에 등재돼 있습니다.</li><li>전작은 결정적 어서션 9종으로 만든 eval 하네스에서 기준선 38/38을 두고 배포했습니다.</li></ul></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">근거</h2><div class="cs-b"><ul class="ev"><li><a href="https://github.com/This-HW/hiway-kit">GitHub</a></li><li><a href="https://hiway.thishw.com/ko/">문서</a></li><li>Claude Code에서 <code>/plugin install hiway-kit</code></li></ul></div></section>
+  <nav class="nx wrap" aria-label="다음 사례">
+    <a href="../mdp/"><span>다음 사례</span><strong lang="ko">마케팅 데이터 플랫폼 재구축</strong></a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p class="foot-name">이현욱<span>AI·데이터 엔지니어</span></p>
+    <a class="lang" href="../../en/work/hiway-kit/" hreflang="en" lang="en" aria-label="영어로 보기">English</a>
+  </div>
+</footer>
+</body>
+</html>

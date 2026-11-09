@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hiway-kit | Hyunwook Lee</title>
+<meta name="description" content="A development kit where AI agents carry a task through to production-ready code on their own; people decide only at the planning and verification gates. Accepted into Anthropic&#x27;s Claude plugin directory after review">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f4f5f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111315" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hiway-kit | Hyunwook Lee">
+<meta property="og:description" content="A development kit where AI agents carry a task through to production-ready code on their own; people decide only at the planning and verification gates. Accepted into Anthropic&#x27;s Claude plugin directory after review">
+<meta property="og:url" content="https://this-hw.github.io/en/work/hiway-kit/">
+<meta property="og:image" content="https://this-hw.github.io/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://this-hw.github.io/en/work/hiway-kit/">
+<link rel="alternate" hreflang="ko" href="https://this-hw.github.io/work/hiway-kit/">
+<link rel="alternate" hreflang="en" href="https://this-hw.github.io/en/work/hiway-kit/">
+<link rel="alternate" hreflang="x-default" href="https://this-hw.github.io/work/hiway-kit/">
+<link rel="preload" href="../../../assets/fonts/hwsans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<script src="../../../assets/js/site.js" defer></script>
+</head>
+<body class="p-case">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap mast-in">
+    <a class="mast-name" href="../../../en/" aria-label="Hyunwook Lee — Home">HW</a>
+    <nav class="mast-nav" aria-label="Selected work"><ul><li><a href="../../../en/#work">Work</a></li><li><a href="../../../en/#career">Career</a></li><li><a href="../../../en/#principles">How I work</a></li><li><a href="../../../en/#stack">Stack</a></li><li><a href="../../../en/#contact">Contact</a></li></ul></nav>
+    <a class="lang" href="../../../work/hiway-kit/" hreflang="ko" lang="ko" aria-label="View in Korean">한국어</a>
+  </div>
+</header>
+<main id="main">
+
+<article class="case-page">
+  <header class="ch wrap">
+    <p class="ch-back"><a href="../../#work">All work</a></p>
+    <p class="ch-tags tags" lang="en">Claude Code · Codex · Python · GitHub Actions</p>
+    <h1 class="ch-t" lang="en">hiway-kit</h1>
+    <p class="ch-dek">A development kit where AI agents carry a task through to <span class="nw">production-ready</span> code on their own; people decide only at the planning and verification gates. Accepted into Anthropic&#x27;s Claude plugin directory after review</p>
+  </header>
+  <section class="cs wrap" data-reveal><h2 class="cs-h">Context</h2><div class="cs-b"><p>Hand a feature to a coding agent and it starts writing code at once, then reports &quot;done&quot; soon after. Often requirements nobody had specified were filled in by guesswork, and the tests it said it ran never ran.</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">Problem</h2><div class="cs-b"><p>An agent&#x27;s completion report was not enough to confirm that the requirements had been met. And if a person has to watch every step, there&#x27;s no point in handing the work over.</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">What I built</h2><div class="cs-b"><p>Two gates with a loop between them.</p><ul class="bul"><li><strong>Planning gate</strong>: larger tasks start with a plan whose completion criteria are runnable commands. The work stops for a question only when an ambiguity touches data, security or money.</li><li><strong>Build loop</strong>: AI agents push an approved plan through to the end, stopping only for questions that need a person.</li><li><strong>Verification gate</strong>: a task counts as done only when the check commands written as its completion criteria pass. Before merge, a separate context reviews the change and scans it for security issues.</li><li>Built for Claude Code first; Codex and Antigravity get the same rules and workflow, within what each tool supports.</li></ul></div><figure class="dg"><svg class="dg-svg dg-w" viewBox="-2 -2 1044 217" width="1044" height="217" role="img" aria-labelledby="dg-hiway-kit-w-title" focusable="false"><title id="dg-hiway-kit-w-title">hiway-kit architecture</title><defs><marker id="dg-hiway-kit-w-ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head"/></marker><marker id="dg-hiway-kit-w-aha" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head dg-head-acc"/></marker></defs><g class="dg-node dg-accent"><rect x="0" y="0" width="268" height="136" rx="3"/><circle cx="17" cy="20.56" r="3" class="dg-dot"/><text x="26" y="24.88" class="dg-tag">People decide</text><text x="14" y="45.4" class="dg-t" text-anchor="start">Planning gate</text><text x="14" y="67.24" class="dg-s" text-anchor="start">Completion criteria are</text><text x="14" y="84.24" class="dg-s" text-anchor="start">runnable commands</text><text x="14" y="101.24" class="dg-s" text-anchor="start">Asks only about data, security or money</text></g><g class="dg-node dg-plain"><rect x="328" y="0" width="268" height="136" rx="3"/><text x="342" y="27.4" class="dg-t" text-anchor="start">Build loop</text><text x="342" y="49.24" class="dg-s" text-anchor="start">AI agents push the approved</text><text x="342" y="66.24" class="dg-s" text-anchor="start">plan through to the end</text></g><g class="dg-node dg-accent"><rect x="656" y="0" width="268" height="136" rx="3"/><circle cx="673" cy="20.56" r="3" class="dg-dot"/><text x="682" y="24.88" class="dg-tag">People decide</text><text x="670" y="45.4" class="dg-t" text-anchor="start">Verification gate</text><text x="670" y="67.24" class="dg-s" text-anchor="start">Done only when the</text><text x="670" y="84.24" class="dg-s" text-anchor="start">completion checks pass</text><text x="670" y="101.24" class="dg-s" text-anchor="start">Separate-context review and</text><text x="670" y="118.24" class="dg-s" text-anchor="start">security scan before merge</text></g><g class="dg-node dg-muted"><rect x="964" y="46" width="76" height="44" rx="3"/><text x="1002" y="72.4" class="dg-t" text-anchor="middle">Done</text></g><path d="M268 68 L328 68" class="dg-e" marker-end="url(#dg-hiway-kit-w-ah)"/><path d="M596 68 L656 68" class="dg-e" marker-end="url(#dg-hiway-kit-w-ah)"/><path d="M924 68 L964 68" class="dg-e" marker-end="url(#dg-hiway-kit-w-ah)"/><path d="M504.88 136 L504.88 166 L419.12 166 L419.12 137" class="dg-e" marker-end="url(#dg-hiway-kit-w-ah)"/><text x="462" y="190" class="dg-s" text-anchor="middle">Stops only for questions</text><text x="462" y="207" class="dg-s" text-anchor="middle">that need a person</text></svg><svg class="dg-svg dg-n" viewBox="-2 -2 344 527" width="344" height="527" role="img" aria-labelledby="dg-hiway-kit-n-title" focusable="false"><title id="dg-hiway-kit-n-title">hiway-kit architecture</title><defs><marker id="dg-hiway-kit-n-ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head"/></marker><marker id="dg-hiway-kit-n-aha" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head dg-head-acc"/></marker></defs><g class="dg-node dg-accent"><rect x="0" y="0" width="304" height="119" rx="3"/><circle cx="17" cy="20.56" r="3" class="dg-dot"/><text x="26" y="24.88" class="dg-tag">People decide</text><text x="14" y="45.4" class="dg-t" text-anchor="start">Planning gate</text><text x="14" y="67.24" class="dg-s" text-anchor="start">Completion criteria are</text><text x="14" y="84.24" class="dg-s" text-anchor="start">runnable commands</text><text x="14" y="101.24" class="dg-s" text-anchor="start">Asks only about data, security or money</text></g><g class="dg-node dg-plain"><rect x="0" y="159" width="304" height="84" rx="3"/><text x="14" y="186.4" class="dg-t" text-anchor="start">Build loop</text><text x="14" y="208.24" class="dg-s" text-anchor="start">AI agents push the approved</text><text x="14" y="225.24" class="dg-s" text-anchor="start">plan through to the end</text></g><g class="dg-node dg-accent"><rect x="0" y="307" width="304" height="136" rx="3"/><circle cx="17" cy="327.56" r="3" class="dg-dot"/><text x="26" y="331.88" class="dg-tag">People decide</text><text x="14" y="352.4" class="dg-t" text-anchor="start">Verification gate</text><text x="14" y="374.24" class="dg-s" text-anchor="start">Done only when the</text><text x="14" y="391.24" class="dg-s" text-anchor="start">completion checks pass</text><text x="14" y="408.24" class="dg-s" text-anchor="start">Separate-context review and</text><text x="14" y="425.24" class="dg-s" text-anchor="start">security scan before merge</text></g><g class="dg-node dg-muted"><rect x="0" y="483" width="76" height="40" rx="3"/><text x="38" y="507.4" class="dg-t" text-anchor="middle">Done</text></g><path d="M22 119 L22 159" class="dg-e" marker-end="url(#dg-hiway-kit-n-ah)"/><path d="M22 243 L22 307" class="dg-e" marker-end="url(#dg-hiway-kit-n-ah)"/><path d="M22 443 L22 483" class="dg-e" marker-end="url(#dg-hiway-kit-n-ah)"/><path d="M304 184.2 L330 184.2 L330 217.8 L305 217.8" class="dg-e" marker-end="url(#dg-hiway-kit-n-ah)"/><text x="38" y="270.24" class="dg-s" text-anchor="start">Stops only for questions</text><text x="38" y="287.24" class="dg-s" text-anchor="start">that need a person</text></svg></figure></section><section class="cs wrap" data-reveal><h2 class="cs-h">What I got wrong</h2><div class="cs-b"><p>With 32 agents, there were 139 trigger points where an everyday phrase like &quot;commit this&quot; or &quot;take a look&quot; would call up a subagent. I folded or removed agents that other steps already covered or that nothing used, cut to 15, and rewrote their trigger conditions; 139 became 0. The same release cut <span class="nw">auto-format</span> hook latency on document edits from 242 ms to 19 ms (median of five runs).</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">Result</h2><div class="cs-b"><ul class="bul"><li>Accepted into Anthropic&#x27;s Claude plugin directory after review in September 2026. The directory serves claude.ai, Cowork and Claude Code.</li><li>Its predecessor, <a href="https://github.com/This-HW/claude-code-kit"><span class="nw">claude-code-kit</span></a>, is listed in Anthropic&#x27;s community plugin marketplace.</li><li>The predecessor shipped with a deterministic eval harness (nine assertion types), passing all 38 baseline checks.</li></ul></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">Evidence</h2><div class="cs-b"><ul class="ev"><li><a href="https://github.com/This-HW/hiway-kit">GitHub</a></li><li><a href="https://hiway.thishw.com/">Docs</a></li><li>in Claude Code: <code>/plugin install hiway-kit</code></li></ul></div></section>
+  <nav class="nx wrap" aria-label="Next case">
+    <a href="../mdp/"><span>Next case</span><strong lang="en">Marketing data platform rebuild</strong></a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p class="foot-name">Hyunwook Lee<span>AI &amp; Data Engineer</span></p>
+    <a class="lang" href="../../../work/hiway-kit/" hreflang="ko" lang="ko" aria-label="View in Korean">한국어</a>
+  </div>
+</footer>
+</body>
+</html>

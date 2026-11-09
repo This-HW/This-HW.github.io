@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>데이터 매체 파이프라인 | 이현욱</title>
+<meta name="description" content="공시·한국은행 통계·뉴스 등 공개 데이터로 AI가 영문 기사를 쓰고, 계산은 코드가 하며, 자동 검수를 거쳐 경제 매체와 문화 산업 매체에 발행">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f4f5f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111315" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="데이터 매체 파이프라인 | 이현욱">
+<meta property="og:description" content="공시·한국은행 통계·뉴스 등 공개 데이터로 AI가 영문 기사를 쓰고, 계산은 코드가 하며, 자동 검수를 거쳐 경제 매체와 문화 산업 매체에 발행">
+<meta property="og:url" content="https://this-hw.github.io/work/syndicator/">
+<meta property="og:image" content="https://this-hw.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://this-hw.github.io/work/syndicator/">
+<link rel="alternate" hreflang="ko" href="https://this-hw.github.io/work/syndicator/">
+<link rel="alternate" hreflang="en" href="https://this-hw.github.io/en/work/syndicator/">
+<link rel="alternate" hreflang="x-default" href="https://this-hw.github.io/work/syndicator/">
+<link rel="preload" href="../../assets/fonts/hwsans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script src="../../assets/js/site.js" defer></script>
+</head>
+<body class="p-case">
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="mast">
+  <div class="wrap mast-in">
+    <a class="mast-name" href="../../" aria-label="이현욱 — 홈">HW</a>
+    <nav class="mast-nav" aria-label="대표 작업"><ul><li><a href="../../#work">작업</a></li><li><a href="../../#career">경력</a></li><li><a href="../../#principles">일하는 방식</a></li><li><a href="../../#stack">기술</a></li><li><a href="../../#contact">연락</a></li></ul></nav>
+    <a class="lang" href="../../en/work/syndicator/" hreflang="en" lang="en" aria-label="영어로 보기">English</a>
+  </div>
+</header>
+<main id="main">
+
+<article class="case-page">
+  <header class="ch wrap">
+    <p class="ch-back"><a href="../../#work">모든 작업</a></p>
+    <p class="ch-tags tags" lang="en">Python · LLM · Static site · GitHub Actions</p>
+    <h1 class="ch-t" lang="ko">데이터 매체 파이프라인</h1>
+    <p class="ch-dek">공시·한국은행 통계·뉴스 등 공개 데이터로 AI가 영문 기사를 쓰고, 계산은 코드가 하며, 자동 검수를 거쳐 경제 매체와 문화 산업 매체에 발행</p>
+  </header>
+  <section class="cs wrap" data-reveal><h2 class="cs-h">배경</h2><div class="cs-b"><p>공시(DART), 한국은행 경제통계(ECOS), 뉴스 같은 데이터는 공개돼 있지만, 읽기 쉬운 영문 기사로 바꾸려면 사람이 숫자를 계산하고 문장을 쓰고 검수해야 합니다.</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">문제</h2><div class="cs-b"><p>LLM이 쓴 기사에는 수치 오류가 섞일 수 있습니다. 그렇다고 모든 기사를 사람이 검수하면 발행이 계속 사람 손에 묶입니다.</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">만든 것</h2><div class="cs-b"><ul class="bul"><li>수집원 8개(공시·한국은행 통계·뉴스 등)에서 모은 데이터를 이슈별로 묶어 LLM이 영문 기사로 다시 씁니다. 한국어판도 함께 냅니다.</li><li>계산은 코드가 하고, LLM은 계산하지 않습니다. 전주 데이터가 없으면 전주 대비 값을 만들지 않습니다.</li><li>검수는 규칙 검사와 LLM 검사로 합니다. LLM이 숫자가 틀렸다고 지목해도, 코드가 원자료로 다시 계산해 확인해야 반려합니다.</li><li>결과는 병합(=발행)·반려·보류로 나뉩니다. 사람은 보류만 봅니다.</li><li>정적 사이트로 발행합니다. 배포가 실패하면 자동으로 되돌립니다.</li></ul></div><figure class="dg"><svg class="dg-svg dg-w" viewBox="-2 -2 1044 353" width="1044" height="353" role="img" aria-labelledby="dg-syndicator-w-title" focusable="false"><title id="dg-syndicator-w-title">데이터 매체 파이프라인 구조도</title><defs><marker id="dg-syndicator-w-ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head"/></marker><marker id="dg-syndicator-w-aha" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head dg-head-acc"/></marker></defs><g class="dg-group"><rect x="620" y="0" width="420" height="224" rx="4"/><text x="634" y="21" class="dg-cap" text-anchor="start">검수</text></g><g class="dg-node dg-plain"><rect x="0" y="36" width="150" height="67" rx="3"/><text x="14" y="63.4" class="dg-t" text-anchor="start">수집원 8개</text></g><g class="dg-node dg-plain"><rect x="200" y="36" width="150" height="67" rx="3"/><text x="214" y="63.4" class="dg-t" text-anchor="start">이슈별로 묶음</text></g><g class="dg-node dg-plain"><rect x="400" y="36" width="172" height="67" rx="3"/><text x="414" y="63.4" class="dg-t" text-anchor="start">LLM 재작성</text><text x="414" y="85.24" class="dg-s" text-anchor="start">계산은 코드가 함</text></g><g class="dg-node dg-plain"><rect x="640" y="36" width="172" height="67" rx="3"/><text x="654" y="63.4" class="dg-t" text-anchor="start">규칙 검사</text></g><g class="dg-node dg-plain"><rect x="848" y="36" width="172" height="67" rx="3"/><text x="862" y="63.4" class="dg-t" text-anchor="start">LLM 검사</text><text x="862" y="85.24" class="dg-s" text-anchor="start">숫자 오류 의심</text></g><g class="dg-node dg-plain"><rect x="848" y="137" width="172" height="67" rx="3"/><text x="862" y="164.4" class="dg-t" text-anchor="start">코드 재계산</text><text x="862" y="186.24" class="dg-s" text-anchor="start">원자료로 다시 확인</text></g><path d="M150 69.5 L200 69.5" class="dg-e" marker-end="url(#dg-syndicator-w-ah)"/><path d="M350 69.5 L400 69.5" class="dg-e" marker-end="url(#dg-syndicator-w-ah)"/><path d="M572 69.5 L620 69.5" class="dg-e" marker-end="url(#dg-syndicator-w-ah)"/><path d="M934 103 L934 137" class="dg-e" marker-end="url(#dg-syndicator-w-ah)"/><path d="M830 224 L830 254" class="dg-e"/><path d="M64 254 L830 254" class="dg-e"/><g class="dg-node dg-accent"><rect x="0" y="282" width="128" height="67" rx="3"/><text x="14" y="309.4" class="dg-t" text-anchor="start">보류</text></g><path d="M64 254 L64 282" class="dg-e" marker-end="url(#dg-syndicator-w-ah)"/><g class="dg-node dg-plain"><rect x="440" y="282" width="128" height="67" rx="3"/><text x="454" y="309.4" class="dg-t" text-anchor="start">반려</text></g><path d="M504 254 L504 282" class="dg-e" marker-end="url(#dg-syndicator-w-ah)"/><g class="dg-node dg-plain"><rect x="650" y="282" width="128" height="67" rx="3"/><text x="664" y="309.4" class="dg-t" text-anchor="start">병합</text><text x="664" y="331.24" class="dg-s" text-anchor="start">= 발행</text></g><path d="M714 254 L714 282" class="dg-e" marker-end="url(#dg-syndicator-w-ah)"/><g class="dg-node dg-accent"><rect x="176" y="282" width="176" height="67" rx="3"/><text x="190" y="309.4" class="dg-t" text-anchor="start">사람</text><text x="190" y="331.24" class="dg-s" text-anchor="start">보류만 봄</text></g><g class="dg-node dg-plain"><rect x="826" y="282" width="214" height="67" rx="3"/><text x="840" y="309.4" class="dg-t" text-anchor="start">정적 사이트</text><text x="840" y="331.24" class="dg-s" text-anchor="start">배포 실패 시 자동 되돌림</text></g><path d="M128 315.5 L176 315.5" class="dg-e dg-e-acc" marker-end="url(#dg-syndicator-w-aha)"/><path d="M778 315.5 L826 315.5" class="dg-e" marker-end="url(#dg-syndicator-w-ah)"/></svg><svg class="dg-svg dg-n" viewBox="-2 -2 344 687" width="344" height="687" role="img" aria-labelledby="dg-syndicator-n-title" focusable="false"><title id="dg-syndicator-n-title">데이터 매체 파이프라인 구조도</title><defs><marker id="dg-syndicator-n-ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head"/></marker><marker id="dg-syndicator-n-aha" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head dg-head-acc"/></marker></defs><g class="dg-group"><rect x="0" y="255" width="340" height="216" rx="4"/><text x="14" y="276" class="dg-cap" text-anchor="start">검수</text></g><g class="dg-node dg-plain"><rect x="0" y="0" width="340" height="46" rx="3"/><text x="14" y="27.4" class="dg-t" text-anchor="start">수집원 8개</text></g><g class="dg-node dg-plain"><rect x="0" y="76" width="340" height="46" rx="3"/><text x="14" y="103.4" class="dg-t" text-anchor="start">이슈별로 묶음</text></g><g class="dg-node dg-plain"><rect x="0" y="152" width="340" height="67" rx="3"/><text x="14" y="179.4" class="dg-t" text-anchor="start">LLM 재작성</text><text x="14" y="201.24" class="dg-s" text-anchor="start">계산은 코드가 함</text></g><g class="dg-node dg-plain"><rect x="14" y="291" width="150" height="67" rx="3"/><text x="28" y="318.4" class="dg-t" text-anchor="start">규칙 검사</text></g><g class="dg-node dg-plain"><rect x="176" y="291" width="150" height="67" rx="3"/><text x="190" y="318.4" class="dg-t" text-anchor="start">LLM 검사</text><text x="190" y="340.24" class="dg-s" text-anchor="start">숫자 오류 의심</text></g><g class="dg-node dg-plain"><rect x="176" y="388" width="150" height="67" rx="3"/><text x="190" y="415.4" class="dg-t" text-anchor="start">코드 재계산</text><text x="190" y="437.24" class="dg-s" text-anchor="start">원자료로 다시 확인</text></g><path d="M22 46 L22 76" class="dg-e" marker-end="url(#dg-syndicator-n-ah)"/><path d="M22 122 L22 152" class="dg-e" marker-end="url(#dg-syndicator-n-ah)"/><path d="M22 219 L22 255" class="dg-e" marker-end="url(#dg-syndicator-n-ah)"/><path d="M251 358 L251 388" class="dg-e" marker-end="url(#dg-syndicator-n-ah)"/><g class="dg-node dg-accent"><rect x="0" y="519" width="105.333" height="67" rx="3"/><text x="14" y="546.4" class="dg-t" text-anchor="start">보류</text></g><path d="M52.6667 495 L52.6667 519" class="dg-e" marker-end="url(#dg-syndicator-n-ah)"/><g class="dg-node dg-plain"><rect x="117.333" y="519" width="105.333" height="67" rx="3"/><text x="131.333" y="546.4" class="dg-t" text-anchor="start">반려</text></g><path d="M170 495 L170 519" class="dg-e" marker-end="url(#dg-syndicator-n-ah)"/><g class="dg-node dg-plain"><rect x="234.667" y="519" width="105.333" height="67" rx="3"/><text x="248.667" y="546.4" class="dg-t" text-anchor="start">병합</text><text x="248.667" y="568.24" class="dg-s" text-anchor="start">= 발행</text></g><path d="M287.333 495 L287.333 519" class="dg-e" marker-end="url(#dg-syndicator-n-ah)"/><path d="M170 471 L170 495" class="dg-e"/><path d="M52.6667 495 L287.333 495" class="dg-e"/><g class="dg-node dg-accent"><rect x="0" y="616" width="150" height="67" rx="3"/><text x="14" y="643.4" class="dg-t" text-anchor="start">사람</text><text x="14" y="665.24" class="dg-s" text-anchor="start">보류만 봄</text></g><g class="dg-node dg-plain"><rect x="172" y="616" width="168" height="67" rx="3"/><text x="186" y="643.4" class="dg-t" text-anchor="start">정적 사이트</text><text x="186" y="665.24" class="dg-s" text-anchor="start">배포 실패 시 자동 되돌림</text></g><path d="M52.6667 586 L52.6667 616" class="dg-e dg-e-acc" marker-end="url(#dg-syndicator-n-aha)"/><path d="M287.333 586 L287.333 616" class="dg-e" marker-end="url(#dg-syndicator-n-ah)"/></svg></figure></section><section class="cs wrap" data-reveal><h2 class="cs-h">자동 검수로 넘긴 방법</h2><div class="cs-b"><p>처음에는 사람이 모든 글을 병합했습니다. 자동 검수를 바로 켜지 않고 먼저 사람 판단과 나란히 돌려 비교했습니다. 위험한 불일치가 없는 것을 확인한 뒤에 넘겼습니다(<span class="nw">2026-10</span>).</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">결과</h2><div class="cs-b"><p class="lead">매체 2곳(경제·시장을 다루는 The Korea Pulse, 한국 문화 산업을 다루는 The Korea Wave), 게시 기사 63건(<span class="nw">2026-11-08</span> 기준, 영문판·한국어판 각 1벌).</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">근거</h2><div class="cs-b"><ul class="ev"><li><a href="https://pulse.koreasignals.com/">The Korea Pulse</a></li><li><a href="https://wave.koreasignals.com/">The Korea Wave</a></li><li>파이프라인 저장소는 비공개(면접에서 시연 가능)</li></ul></div></section>
+  <nav class="nx wrap" aria-label="다음 사례">
+    <a href="../market-data/"><span>다음 사례</span><strong lang="ko">주식 데이터·모의 매매 시스템</strong></a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p class="foot-name">이현욱<span>AI·데이터 엔지니어</span></p>
+    <a class="lang" href="../../en/work/syndicator/" hreflang="en" lang="en" aria-label="영어로 보기">English</a>
+  </div>
+</footer>
+</body>
+</html>

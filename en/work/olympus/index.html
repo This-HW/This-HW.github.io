@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent operations platform | Hyunwook Lee</title>
+<meta name="description" content="AI plans, executes and evaluates; people act as a board, deciding only on direction, budget and risk (in progress)">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f4f5f6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111315" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Agent operations platform | Hyunwook Lee">
+<meta property="og:description" content="AI plans, executes and evaluates; people act as a board, deciding only on direction, budget and risk (in progress)">
+<meta property="og:url" content="https://this-hw.github.io/en/work/olympus/">
+<meta property="og:image" content="https://this-hw.github.io/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://this-hw.github.io/en/work/olympus/">
+<link rel="alternate" hreflang="ko" href="https://this-hw.github.io/work/olympus/">
+<link rel="alternate" hreflang="en" href="https://this-hw.github.io/en/work/olympus/">
+<link rel="alternate" hreflang="x-default" href="https://this-hw.github.io/work/olympus/">
+<link rel="preload" href="../../../assets/fonts/hwsans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../../assets/fonts/newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../../assets/css/site.css">
+<script src="../../../assets/js/site.js" defer></script>
+</head>
+<body class="p-case">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap mast-in">
+    <a class="mast-name" href="../../../en/" aria-label="Hyunwook Lee — Home">HW</a>
+    <nav class="mast-nav" aria-label="Selected work"><ul><li><a href="../../../en/#work">Work</a></li><li><a href="../../../en/#career">Career</a></li><li><a href="../../../en/#principles">How I work</a></li><li><a href="../../../en/#stack">Stack</a></li><li><a href="../../../en/#contact">Contact</a></li></ul></nav>
+    <a class="lang" href="../../../work/olympus/" hreflang="ko" lang="ko" aria-label="View in Korean">한국어</a>
+  </div>
+</header>
+<main id="main">
+
+<article class="case-page">
+  <header class="ch wrap">
+    <p class="ch-back"><a href="../../#work">All work</a></p>
+    <p class="ch-tags tags" lang="en">Python · PostgreSQL · LLM Agents</p>
+    <h1 class="ch-t" lang="en">Agent operations platform</h1>
+    <p class="ch-dek">AI plans, executes and evaluates; people act as a board, deciding only on direction, budget and risk (in progress)</p>
+  </header>
+  <section class="cs wrap" data-reveal><h2 class="cs-h">Context</h2><div class="cs-b"><p>As I delegated more work to AI, more of my time went into checking the results, and human review became the bottleneck.</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">Problem</h2><div class="cs-b"><p>For AI to plan work, carry it out and judge the results without a person in the loop, I had to decide what a person must still keep control of.</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">What I built<span class="cs-note">second version in progress</span></h2><div class="cs-b"><ul class="bul"><li>People act as a board and decide only on direction, budget and risk.</li><li>For each piece of work, the hypothesis and the success and failure criteria are fixed before any result exists.</li><li>AI runners work in isolated workspaces; the author and the reviewer are always different runners.</li><li>Actions that affect external systems pass through a single gateway, and a person approves by phone where required.</li><li>Version one assigned local and cloud models by role, falling back to the next model on failure.</li></ul></div><figure class="dg"><svg class="dg-svg dg-w" viewBox="-2 -2 1044 257" width="1044" height="257" role="img" aria-labelledby="dg-olympus-w-title" focusable="false"><title id="dg-olympus-w-title">Agent operations platform architecture</title><defs><marker id="dg-olympus-w-ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head"/></marker><marker id="dg-olympus-w-aha" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head dg-head-acc"/></marker></defs><g class="dg-group"><rect x="276" y="0" width="380" height="133" rx="4"/><text x="290" y="21" class="dg-cap" text-anchor="start">AI runners in isolated workspaces</text></g><g class="dg-node dg-plain"><rect x="296" y="42" width="138" height="46" rx="3"/><text x="365" y="69.4" class="dg-t" text-anchor="middle">Author</text></g><g class="dg-node dg-plain"><rect x="498" y="42" width="138" height="46" rx="3"/><text x="567" y="69.4" class="dg-t" text-anchor="middle">Reviewer</text></g><text x="466" y="72" class="dg-neq" text-anchor="middle">≠</text><text x="466" y="114.24" class="dg-s" text-anchor="middle">always different runners</text><g class="dg-node dg-accent"><rect x="0" y="23" width="210" height="84" rx="3"/><text x="14" y="50.4" class="dg-t" text-anchor="start">Board (people)</text><text x="14" y="72.24" class="dg-s" text-anchor="start">Decides only direction,</text><text x="14" y="89.24" class="dg-s" text-anchor="start">budget and risk</text></g><g class="dg-node dg-plain"><rect x="720" y="23" width="186" height="84" rx="3"/><text x="734" y="50.4" class="dg-t" text-anchor="start">Single gateway</text><text x="734" y="72.24" class="dg-s" text-anchor="start">Every action that affects</text><text x="734" y="89.24" class="dg-s" text-anchor="start">external systems</text></g><g class="dg-node dg-muted"><rect x="936" y="23" width="104" height="84" rx="3"/><text x="950" y="50.4" class="dg-t" text-anchor="start">External</text><text x="950" y="70.4" class="dg-t" text-anchor="start">systems</text></g><path d="M210 65 L276 65" class="dg-e" marker-end="url(#dg-olympus-w-ah)"/><path d="M656 65 L720 65" class="dg-e" marker-end="url(#dg-olympus-w-ah)"/><path d="M906 65 L936 65" class="dg-e" marker-end="url(#dg-olympus-w-ah)"/><g class="dg-node dg-accent"><rect x="720" y="169" width="186" height="84" rx="3"/><text x="734" y="196.4" class="dg-t" text-anchor="start">Approval by phone</text><text x="734" y="218.24" class="dg-s" text-anchor="start">A person approves where</text><text x="734" y="235.24" class="dg-s" text-anchor="start">required</text></g><path d="M813 107 L813 169" class="dg-e dg-e-acc dg-dot-line"/></svg><svg class="dg-svg dg-n" viewBox="-2 -2 344 496" width="344" height="496" role="img" aria-labelledby="dg-olympus-n-title" focusable="false"><title id="dg-olympus-n-title">Agent operations platform architecture</title><defs><marker id="dg-olympus-n-ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head"/></marker><marker id="dg-olympus-n-aha" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1.5 L8.5 5 L1 8.5" class="dg-head dg-head-acc"/></marker></defs><g class="dg-group"><rect x="0" y="120" width="340" height="133" rx="4"/><text x="14" y="141" class="dg-cap" text-anchor="start">AI runners in isolated workspaces</text></g><g class="dg-node dg-accent"><rect x="0" y="0" width="340" height="84" rx="3"/><text x="14" y="27.4" class="dg-t" text-anchor="start">Board (people)</text><text x="14" y="49.24" class="dg-s" text-anchor="start">Decides only direction,</text><text x="14" y="66.24" class="dg-s" text-anchor="start">budget and risk</text></g><g class="dg-node dg-plain"><rect x="14" y="162" width="136" height="46" rx="3"/><text x="82" y="189.4" class="dg-t" text-anchor="middle">Author</text></g><g class="dg-node dg-plain"><rect x="190" y="162" width="136" height="46" rx="3"/><text x="258" y="189.4" class="dg-t" text-anchor="middle">Reviewer</text></g><text x="170" y="192" class="dg-neq" text-anchor="middle">≠</text><text x="170" y="234.24" class="dg-s" text-anchor="middle">always different runners</text><path d="M22 84 L22 120" class="dg-e" marker-end="url(#dg-olympus-n-ah)"/><g class="dg-node dg-plain"><rect x="0" y="289" width="190" height="121" rx="3"/><text x="14" y="316.4" class="dg-t" text-anchor="start">Single gateway</text><text x="14" y="338.24" class="dg-s" text-anchor="start">Every action that affects</text><text x="14" y="355.24" class="dg-s" text-anchor="start">external systems</text></g><g class="dg-node dg-accent"><rect x="214" y="289" width="126" height="121" rx="3"/><text x="228" y="316.4" class="dg-t" text-anchor="start">Approval by</text><text x="228" y="336.4" class="dg-t" text-anchor="start">phone</text><text x="228" y="358.24" class="dg-s" text-anchor="start">A person</text><text x="228" y="375.24" class="dg-s" text-anchor="start">approves where</text><text x="228" y="392.24" class="dg-s" text-anchor="start">required</text></g><path d="M22 253 L22 289" class="dg-e" marker-end="url(#dg-olympus-n-ah)"/><path d="M190 349.5 L214 349.5" class="dg-e dg-e-acc dg-dot-line"/><g class="dg-node dg-muted"><rect x="0" y="446" width="190" height="46" rx="3"/><text x="14" y="473.4" class="dg-t" text-anchor="start">External systems</text></g><path d="M22 410 L22 446" class="dg-e" marker-end="url(#dg-olympus-n-ah)"/></svg></figure></section><section class="cs wrap" data-reveal><h2 class="cs-h">What I got wrong, then fixed</h2><div class="cs-b"><ul class="bul"><li>Version one split the work across seven AI workers on a queue. It <span class="nw">crash-looped</span> more than 200,000 times, so I replaced it with a single build flow.</li><li>A <span class="nw">local-model</span> switch I had asked for myself failed the rejection criteria I set before measuring (3.26× slower, nearly twice the memory), so I withdrew it.</li><li>Since then, before changing anything, I first write down what result would make me abandon the change.</li></ul></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">Result</h2><div class="cs-b"><p class="lead">4,520 commits (as of <span class="nw">2026-11-08</span>) and 15,409 test functions (as of <span class="nw">2026-10-28</span>), across both versions. The first pilot will be the <a href="../syndicator/"><span class="nw">data-to-news</span> pipeline</a> (not yet connected as of Nov 2026).</p></div></section><section class="cs wrap" data-reveal><h2 class="cs-h">Evidence</h2><div class="cs-b"><p>Private repository; demo available in interview.</p></div></section>
+  <nav class="nx wrap" aria-label="Next case">
+    <a href="../hiway-kit/"><span>Next case</span><strong lang="en">hiway-kit</strong></a>
+  </nav>
+</article>
+
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p class="foot-name">Hyunwook Lee<span>AI &amp; Data Engineer</span></p>
+    <a class="lang" href="../../../work/olympus/" hreflang="ko" lang="ko" aria-label="View in Korean">한국어</a>
+  </div>
+</footer>
+</body>
+</html>
